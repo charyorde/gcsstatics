@@ -1,0 +1,17 @@
+---
+resources:
+- name: resource-gcsstatics
+  type: git
+  source:
+    uri: https://git.greenwood.ng/charyorde/gcsstatics.git
+    skip_ssl_verification: true
+
+jobs:
+- name: build-static
+  plan:
+  - {get: resource-gcsstatics, trigger: true}
+  - aggregate:
+    - task: sphinx
+      file: ci/sphinx.yml
+    - task: markdown
+      file: ci/markdown.yml

@@ -1,0 +1,10 @@
+---
+applications:
+- name: gcsstatics
+  instances: 2
+  memory: 1G
+  buildpack: staticfile_buildpack
+  domains:
+    - greenwood.ng
+  hosts:
+    - gcsstatics

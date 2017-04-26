@@ -1,0 +1,11 @@
+{
+  "name": "gcsstatics",
+  "version": "1.0.0",
+  "description": "GreenCloud Statics Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "charyorde <dreyemi@gmail.com> (https://github.com/charyorde)",
+  "license": "ISC"
+}
