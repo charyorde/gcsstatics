@@ -10,5 +10,8 @@ image_resource:
 inputs:
 - name: resource-gcsstatics
 
+outputs:
+- name: content
+
 run:
-  path: resource-gcsstatics/ci/build-md
+  path: resource-gcsstatics/ci/build-md.sh
