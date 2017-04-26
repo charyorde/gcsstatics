@@ -8,7 +8,7 @@ image_resource:
     tag: '7.9-onbuild'
 
 inputs:
-- name: markdown
+- name: resource-gcsstatics
 
 run:
-    path: ci/build-md
+  path: resource-gcsstatics/ci/build-md

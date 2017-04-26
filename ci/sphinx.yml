@@ -8,8 +8,8 @@ image_resource:
     tag: '2-onbuild'
 
 inputs:
-- name: sphinx
+- name: resource-gcsstatics
 
 run:
-    path: ci/build-rst
+  path: resource-gcsstatics/ci/build-rst
 
