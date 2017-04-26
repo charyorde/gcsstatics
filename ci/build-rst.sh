@@ -2,11 +2,8 @@
 
 set -e -u -x
 
-# Install Python, pip
-if ! [ -x "$(command -v pip)" ]; then
-    echo "Installing sphinx"
-    pip install sphinx
-fi
+echo "Installing Sphinx"
+pip install sphinx
 
 # Build rst files
 #sphinx-build -b html templates/rst content
