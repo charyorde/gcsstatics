@@ -6,9 +6,9 @@ set -e -u -x
 echo "npm path: " $(command -v npm)
 echo "yarn path: " $(command -v yarn)
 
-if ! [ -x "$(command -v showdownjs)" ]; then
+if ! [ -x "$(command -v showdown)" ]; then
     echo "Installing showdownjs"
-    npm install -g showdownjs
+    npm install -g showdown
 fi
-# showdown makehtml -i foo.md -o bar.html
+showdown makehtml -i resource-gcsstatics/templates/markdown -o content
 
