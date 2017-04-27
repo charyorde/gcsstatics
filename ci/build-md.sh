@@ -5,6 +5,8 @@ set -e -u -x
 
 echo "npm path: " $(command -v npm)
 echo "yarn path: " $(command -v yarn)
+MDEXT=".md"
+HTMLEXT=".html"
 
 if ! [ -x "$(command -v showdown)" ]; then
     echo "Installing showdownjs"
@@ -13,7 +15,8 @@ fi
 
 for file in resource-gcsstatics/templates/markdown
 do
-    showdown makehtml -i "$file" -o content/"$file"
+    name=$(basename "$file")
+    showdown makehtml -i "$name$MDEXT" -o content/"$name$HTMLEXT"
 done
 echo "Successfully converted all markdown templates to HTML"
 
