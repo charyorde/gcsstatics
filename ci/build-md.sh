@@ -10,5 +10,10 @@ if ! [ -x "$(command -v showdown)" ]; then
     echo "Installing showdownjs"
     npm install -g showdown
 fi
-showdown makehtml -i resource-gcsstatics/templates/markdown -o content
+
+for file in resource-gcsstatics/templates/markdown
+do
+    showdown makehtml -i resource-gcsstatics/templates/"$file" -o content/"$file"
+done
+echo "Successfully converted all markdown templates to HTML"
 
