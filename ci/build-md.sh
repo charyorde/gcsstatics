@@ -13,7 +13,7 @@ if ! [ -x "$(command -v showdown)" ]; then
     npm install -g showdown
 fi
 
-for file in resource-gcsstatics/templates/markdown
+for file in $(ls resource-gcsstatics/templates/markdown)
 do
     name=$(basename "$file")
     showdown makehtml -i "$name$MDEXT" -o content/"$name$HTMLEXT"
