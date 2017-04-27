@@ -11,8 +11,9 @@ jobs:
 - name: build-static
   plan:
   - {get: resource-gcsstatics, trigger: true}
-  - aggregate:
-    - task: build-rst
-      file: resource-gcsstatics/ci/sphinx.yml
-    - task: build-markdown
-      file: resource-gcsstatics/ci/markdown.yml
+  - task: build-rst
+    file: resource-gcsstatics/ci/sphinx.yml
+  - put: resource-gcsstatics
+    params: file: content
+    #- task: build-markdown
+      #file: resource-gcsstatics/ci/markdown.yml
