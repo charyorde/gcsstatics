@@ -15,7 +15,7 @@ fi
 
 for file in $(ls resource-gcsstatics/templates/markdown)
 do
-    name=$(basename "$file")
+    name=$(basename ${file%.*})
     showdown makehtml -i "$name$MDEXT" -o content/"$name$HTMLEXT"
 done
 echo "Successfully converted all markdown templates to HTML"
