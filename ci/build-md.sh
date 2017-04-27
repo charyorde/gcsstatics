@@ -13,7 +13,7 @@ fi
 
 for file in resource-gcsstatics/templates/markdown
 do
-    showdown makehtml -i resource-gcsstatics/templates/"$file" -o content/"$file"
+    showdown makehtml -i "$file" -o content/"$file"
 done
 echo "Successfully converted all markdown templates to HTML"
 
