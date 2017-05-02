@@ -16,7 +16,6 @@ cp -r content statics
 #rsync -avzH content statics
 
 cd statics
-git pull --rebase origin master
 
 #git config --global user.email "ci@greenwood.ng"
 git config --global user.email "cibot@greenwood.ng"
@@ -25,6 +24,7 @@ git config --global user.name "Concourse"
 git add .
 
 git commit -m 'build v1.0.0'
+git pull --rebase origin master
 
 
 # minimize assets
