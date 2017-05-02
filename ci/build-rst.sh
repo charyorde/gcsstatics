@@ -15,6 +15,7 @@ git clone resource-gcsstatics statics
 cp -r content statics
 
 cd statics
+git pull --rebase origin master
 
 #git config --global user.email "ci@greenwood.ng"
 git config --global user.email "cibot@greenwood.ng"
