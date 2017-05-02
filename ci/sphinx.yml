@@ -11,7 +11,7 @@ inputs:
 - name: resource-gcsstatics
 
 outputs:
-- name: content
+- name: statics
 
 run:
   path: resource-gcsstatics/ci/build-rst.sh

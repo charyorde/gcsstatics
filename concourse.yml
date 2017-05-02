@@ -5,6 +5,9 @@ resources:
   source:
     #uri: https://git.greenwood.ng/charyorde/gcsstatics.git
     uri: https://github.com/charyorde/gcsstatics.git
+    branch: master
+    username: {{username}}
+    password: {{password}}
     skip_ssl_verification: true
 
 jobs:
@@ -14,6 +17,6 @@ jobs:
   - task: build-rst
     file: resource-gcsstatics/ci/sphinx.yml
   - put: resource-gcsstatics
-    params: file: content
+    params: {repository: statics}
     #- task: build-markdown
       #file: resource-gcsstatics/ci/markdown.yml
