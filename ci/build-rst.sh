@@ -13,6 +13,7 @@ sphinx-build -b html resource-gcsstatics/docs content
 # commit content
 git clone resource-gcsstatics statics
 cp -r content statics
+#rsync -avzH content statics
 
 cd statics
 git pull --rebase origin master
